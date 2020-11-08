@@ -33,3 +33,19 @@ function navbar(){
 
 navbar()
 
+
+
+function bloodDrop(){
+    let homeText = document.querySelector('.Home__text')
+    let homeButton = document.querySelector('.Home__button')
+
+    homeButton.addEventListener('mouseenter' , () => {
+        homeText.classList.add('active')
+    })
+    homeButton.addEventListener('mouseleave' , () => {
+        homeText.classList.remove('active')
+    })
+    
+}
+
+bloodDrop()

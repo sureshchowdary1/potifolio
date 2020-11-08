@@ -4,6 +4,7 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style-type: none;
+    outline: none;
 }
 
 body{
@@ -25,7 +26,7 @@ body{
     display: grid;
     grid-template-columns: 70% 30%;
     position: relative;
-    top: 90px;
+    top: 70px;
     z-index: 1;
     overflow: hidden;
 }
@@ -42,14 +43,6 @@ body{
 }
 
 
-.Home__text::before{
-    content: '';
-    width: 100px;
-    height: 100px;
-    background: url(../img/paperRocket/plainRocket.svg);
-    position: absolute;
-    top: 120px;
-}
 
 .Home__text h4 {
     position: relative;
@@ -90,7 +83,9 @@ body{
     border-radius: 50px 50px 40px 40px;
     font-size: 1rem;
     padding: 10px;
+    top: 2px;
     margin: 35px;
+
     border-inline-start-color: rgb(253, 8, 8);
     border-inline-end-color: rgb(253, 8, 8);
     border-block-end: gray;
@@ -98,6 +93,72 @@ body{
     border-bottom: 3px solid gray;
     cursor: pointer;
 }
+
+.Home__text.active button{
+    position: relative;
+    left: 80px;
+    padding: 5px;
+    color: white;
+    background-color: transparent;
+    border-radius: 50px 50px 40px 40px;
+    font-size: 1rem;
+    padding: 10px;
+    top: 2px;
+    margin: 35px;
+
+    border-left: 3px solid red;
+    border-right: 3px solid red;
+
+    border-inline-start-color: rgb(253, 8, 8);
+    border-inline-end-color: rgb(253, 8, 8);
+    border-block-end: gray;
+    border-block-start: transparent;
+    border-bottom: 3px solid gray;
+    cursor: pointer;
+}
+
+.Home__text button:hover{
+    top:0px;
+}
+
+.Home__text .left__blood{
+    position: relative;
+}
+.Home__text.active .left__blood::before{
+    content: '';
+    width: 10px;
+    height: 10px;
+    background:  url(../img/b_drop.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    position: absolute;
+    top:24px;
+    left: -115px;
+    z-index: 99;
+
+}
+
+
+.Home__text.active .left__blood::after{
+    content: '';
+    width: 10px;
+    height: 10px;
+    background:  url(../img/b_drop.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    position: absolute;
+    top:24px;
+    left: 34px;
+    z-index: 99;
+}
+
+
+
+
 
 .Home__text button a{
     color: #fff;
@@ -121,4 +182,42 @@ body{
     height: 100%;
     background: rgba(0, 0, 0, 0.124);
     z-index: 2;
+}
+
+
+@media (min-width : 992px){
+    .Home__text::before{
+        content: '';
+        width: 60px;
+        height: 60px;
+        background: url(../img/paperRocket/white_rocket1.svg) ;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 180px;
+        left: 580px;
+        transform: rotate(20deg);
+        z-index: 1;
+    }
+}
+
+@media (max-width : 992px){
+    .First__section{
+        display: grid;
+        grid-template-columns: 100%;
+        position: relative;
+        top: 70px;
+        z-index: 1;
+        overflow: hidden;
+    }
+
+    .Home__image{
+        margin: 10px;
+        position: absolute;
+        top: 0px;
+        right: 0;
+        width: 40%;
+        height: 200px;
+    }
 }
