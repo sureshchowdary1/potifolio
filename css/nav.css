@@ -1,0 +1,260 @@
+:root {
+    --writing :  'Dancing Script', cursive;
+    --sansita : 'Sansita Swashed', cursive;
+    --heading : 'Grenze Gotisch', cursive;
+    --default : 'Playfair Display', serif;
+
+    --orange : rgb(255, 94, 0);
+    --naviblue: rgb(10, 10, 26);
+    
+}
+
+body{
+    background-color: blue;
+}
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    height: 90px;
+    background-color: var(--orange);
+    z-index: 1000;
+    
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1002;
+}
+
+
+.menu ul {
+    display: flex;
+    position: relative;
+}
+
+.menu ul li{
+    line-height: 88px;
+    margin: 0 30px;
+    position: relative;
+}
+
+.menu ul li a:hover{
+    color : rgb(56, 40, 197);
+}
+
+.fa-caret-down{
+    margin-left: 12px;
+}
+
+.menu ul li a{
+    font-size: 22px;
+    color : #000;
+}
+
+.menu ul li a::before{
+    transition: all 500ms ease-in-out;
+    content: '';
+    width: 12px;
+    height: 3px;
+    position: absolute;
+    top: 60px;
+    background-color: yellow;
+    z-index: 1001;
+}
+
+.menu ul li:nth-child(1):hover a::before{
+    content: '';
+    width: 60px;
+}
+.menu ul li:nth-child(2):hover a::before{
+    content: '';
+    width: 74px;
+}
+
+.menu ul li:nth-child(3):hover a::before{
+    content: '';
+    width: 62px;
+}
+
+.menu ul li:hover .submenu{
+    opacity: 1;
+    visibility: visible;
+}
+
+.menu ul .submenu{
+    opacity: 0;
+    visibility: hidden;
+}
+
+.menu .submenu{
+    transition: all 500ms ease-in-out ;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color:#fff;
+    right: -30px;
+    padding-bottom: 16px;
+}
+.menu .submenu li{
+    line-height: 0px;
+    padding: 32px 0 0 0;
+    border-bottom: 2px solid var(--orange);
+    
+}
+
+.menu .submenu li:nth-child(1){
+    padding-bottom: 2px;
+    width:52px  
+}
+
+.menu .submenu li:nth-child(2) ,
+.menu .submenu li:nth-child(3)
+{
+    padding-bottom: 2px;
+}
+
+.menu ul li .submenu li a::before{
+    content: '';
+    width: 0px;
+    height: 0px;
+}
+
+main{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+}
+
+
+
+.toggle__menu{
+    display: none;
+}
+
+.forBgCover{
+    width: 100%;
+    position: fixed;
+    top: 90px;
+    bottom: 0;
+    background-color: rgba(129, 127, 127, 0.344);
+    z-index: 999;
+    opacity: 0;
+    transition: all 500ms ease-in-out;
+}
+
+@media (max-width :992px){
+
+    .menu.active{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .menu{
+        opacity: 0;
+        visibility: hidden;
+        position: fixed;
+        width: 60%;
+        height: 100%;
+        background-color: white;
+        top: 90px;
+        right: 0;
+        bottom: 0;
+        transition : all 500ms ease-in-out;
+    }
+
+    .menu ul{
+        flex-direction: column;
+    }
+    .menu ul li{
+        line-height: 70px;
+        margin: 0 30px;
+        position: relative;
+    }
+
+    .menu ul li a::before{
+        transition: all 500ms ease-in-out;
+        content: '';
+        width: 12px;
+        height: 3px;
+        position: absolute;
+        top: 50px;
+        background-color: yellow;
+        z-index: 1001;
+    }
+
+    .menu ul li:hover .submenu{
+        opacity: 0;
+        visibility: hidden;
+    }
+    
+    .menu.showSub ul li .submenu{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .menu .submenu{
+        transition: all 500ms ease-in-out ;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        background-color:#fff;
+        right: -30px;
+        padding-bottom: 16px;
+    }
+
+    .menu .submenu li:nth-child(2) ,
+    .menu .submenu li:nth-child(3)
+    {
+        padding-bottom: 2px;
+        width: 74px;
+    }
+
+
+
+
+    .toggle__menu{
+        display: inline;
+        cursor: pointer;
+        line-height: 90px;
+    }
+
+    .toggle__menu .bars__close{
+        opacity: 0;
+        visibility: hidden;
+    }
+    
+    .toggle__menu .bars__open{
+        margin-right: 16px;
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .toggle__menu.active .bars__open{
+        opacity: 0;
+        visibility: hidden;
+    }
+    
+    .toggle__menu.active .bars__close{
+        opacity: 1;
+        visibility: visible;
+        margin-right: 32px;
+    }
+
+
+    .forBgCover.active{
+        width: 100%;
+        position: fixed;
+        top: 90px;
+        bottom: 0;
+        background-color: rgba(129, 127, 127, 0.344);
+        z-index: 999;
+        opacity: 1;
+    }
+}
