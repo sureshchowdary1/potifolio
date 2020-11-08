@@ -9,9 +9,6 @@
     
 }
 
-body{
-    background-color: blue;
-}
 .container{
     width: 90%;
     margin: 0 auto;
@@ -37,6 +34,7 @@ nav{
 .menu ul {
     display: flex;
     position: relative;
+    right: 36px;
 }
 
 .menu ul li{
@@ -44,11 +42,6 @@ nav{
     margin: 0 30px;
     position: relative;
 }
-
-.menu ul li a:hover{
-    color : rgb(56, 40, 197);
-}
-
 .fa-caret-down{
     margin-left: 12px;
 }
@@ -56,6 +49,9 @@ nav{
 .menu ul li a{
     font-size: 22px;
     color : #000;
+}
+.menu ul li a:hover{
+    color : rgb(56, 40, 197);
 }
 
 .menu ul li a::before{
@@ -83,6 +79,8 @@ nav{
     width: 62px;
 }
 
+
+        /* Submenu */
 .menu ul li:hover .submenu{
     opacity: 1;
     visibility: visible;
@@ -93,25 +91,79 @@ nav{
     visibility: hidden;
 }
 
+.menu .submenu li::before{
+    transition: all 500ms ease-in-out;
+    content: '';
+    width: 12px;
+    height: 3px;
+    position: absolute;
+    top: 60px;
+    background-color: yellow;
+    z-index: 1001;
+}
+
+.menu .submenu li:hover::before{
+    content: '';
+    width: 50px;
+    height: 3px;
+    position: absolute;
+    top: 52px;
+    background-color: yellow;
+    z-index: 1001;
+}
+
+.menu .submenu li:nth-child(2):hover::before{
+    width: 76px;
+}
+.menu .submenu li:nth-child(3):hover::before{
+    width: 72px;
+}
+
 .menu .submenu{
     transition: all 500ms ease-in-out ;
     position: absolute;
     display: flex;
     flex-direction: column;
-    background-color:#fff;
-    right: -30px;
+    background: linear-gradient( to right bottom, #165ADA, #25E19A);
+    border-radius: 0 0 5px 1px;
+    right: -50px;
     padding-bottom: 16px;
 }
+
+/* .menu .submenu::before{
+    content: '';
+    position: absolute;
+    top: 0px;
+    right: -24px;
+	width: 0;
+	height: 0;
+	border-top: 8px solid transparent;
+	border-right: 8px solid transparent;
+	border-left: 16px solid white;
+} */
+
+.menu .submenu::after{
+    content: '';
+    position: absolute;
+    top: 150px;
+    left: -24px;
+	width: 0;
+	height: 0;
+	border-right: 16px solid white;
+	border-left: 8px solid transparent;
+	border-bottom: 8px solid transparent;
+}
+
 .menu .submenu li{
     line-height: 0px;
-    padding: 36px 0 0 0;
-    border-bottom: 2px solid var(--orange);
+    margin-bottom: 10px;
+    padding: 36px 0 40px 0;
     
 }
 
 .menu .submenu li:nth-child(1){
     padding-bottom: 2px;
-    width:52px  
+    width:52px  ;
 }
 
 .menu .submenu li:nth-child(2) ,
@@ -126,13 +178,7 @@ nav{
     height: 0px;
 }
 
-main{
-    width: 100%;
-    height: 100vh;
-    background-color: black;
-}
-
-
+        /* Toggle button and bg dark */
 
 .toggle__menu{
     display: none;
@@ -146,11 +192,13 @@ main{
     background-color: rgba(129, 127, 127, 0.344);
     z-index: 999;
     opacity: 0;
+    visibility: hidden;
     transition: all 500ms ease-in-out;
 }
 
 @media (max-width :992px){
 
+    /* menu */
     .menu.active{
         opacity: 1;
         visibility: visible;
@@ -162,15 +210,17 @@ main{
         position: fixed;
         width: 60%;
         height: 100%;
-        background-color: white;
+        background: linear-gradient(to right bottom,rgb(255, 102, 128) 30%, rgb(213, 3, 255)) ;
         top: 90px;
-        right: 0;
+        right: 0px;
         bottom: 0;
         transition : all 500ms ease-in-out;
     }
 
     .menu ul{
         flex-direction: column;
+        position: relative;
+        left: 30px;
     }
     .menu ul li{
         line-height: 70px;
@@ -189,6 +239,22 @@ main{
         z-index: 1001;
     }
 
+        /* Submenu */
+
+    
+    .menu .submenu{
+        
+        transition: all 500ms ease-in-out ;
+        width: 200px;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        background: linear-gradient( to right bottom, #165ADA, #25E19A);
+        border-radius: 0 0 15px 15px;
+        right: -50px;
+        padding-bottom: 16px;
+    }
+
     .menu ul li:hover .submenu{
         opacity: 0;
         visibility: hidden;
@@ -197,6 +263,18 @@ main{
     .menu.showSub ul li .submenu{
         opacity: 1;
         visibility: visible;
+    }
+
+    .menu .submenu::after{
+        content: '';
+        position: absolute;
+        top: 150px;
+        left: -24px;
+        width: 0;
+        height: 0;
+        border-right: 0px solid white;
+        border-left: 0px solid transparent;
+        border-bottom: 0px solid transparent;
     }
 
     .menu .submenu{
@@ -215,10 +293,7 @@ main{
         padding-bottom: 2px;
         width: 74px;
     }
-
-
-
-
+        /* Toggle menu */
     .toggle__menu{
         display: inline;
         cursor: pointer;
@@ -256,5 +331,6 @@ main{
         background-color: rgba(129, 127, 127, 0.344);
         z-index: 999;
         opacity: 1;
+        visibility: visible;
     }
 }

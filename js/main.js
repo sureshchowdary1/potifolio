@@ -1,4 +1,13 @@
 
+
+var typed = new Typed(".typing", {
+    strings: [ '' ,'Fresher' , 'Designer' , 'Web Developer'],
+    typeSpeed : 100,
+    backSpeed : 60,
+    loop : true
+})
+
+
 function navbar(){
     let header = document.querySelector('header')
     let nav = document.querySelector('nav')

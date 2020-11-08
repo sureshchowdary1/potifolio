@@ -6,6 +6,10 @@
     list-style-type: none;
 }
 
+body{
+    scroll-behavior: smooth;
+}
+
 :root {
     --writing :  'Dancing Script', cursive;
     --sansita : 'Sansita Swashed', cursive;
@@ -15,4 +19,106 @@
     --orange : rgb(255, 94, 0);
     --naviblue: rgb(10, 10, 26);
     
+}
+
+.First__section{
+    display: grid;
+    grid-template-columns: 70% 30%;
+    position: relative;
+    top: 90px;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.Home__text{
+    background: url(../img/profile/black.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    padding: 30px 0 90px;
+}
+
+
+.Home__text::before{
+    content: '';
+    width: 100px;
+    height: 100px;
+    background: url(../img/paperRocket/plainRocket.svg);
+    position: absolute;
+    top: 120px;
+}
+
+.Home__text h4 {
+    position: relative;
+    margin-top: 120px;
+    padding : 10px 40px;
+    font-size: 20px;
+}
+
+.Home__text h1{
+    position: relative;
+    padding : 10px 46px;
+    font-size: 32px;
+}
+
+.Home__text p{
+    position: relative;
+    padding : 10px 46px;
+    font-size: 26px;
+}
+
+.Home__text p span{
+    color: var(--orange);
+}
+
+.Home__text h1 ,
+.Home__text h4 ,
+.Home__text p{
+    z-index: 1;
+    color: white;
+} 
+
+.Home__text button{
+    position: relative;
+    left: 80px;
+    padding: 5px;
+    color: white;
+    background-color: transparent;
+    border-radius: 50px 50px 40px 40px;
+    font-size: 1rem;
+    padding: 10px;
+    margin: 35px;
+    border-inline-start-color: rgb(253, 8, 8);
+    border-inline-end-color: rgb(253, 8, 8);
+    border-block-end: gray;
+    border-block-start: transparent;
+    border-bottom: 3px solid gray;
+    cursor: pointer;
+}
+
+.Home__text button a{
+    color: #fff;
+}
+
+.Home__image{
+    background: url(../img/profile/profile1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.Home__image::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.124);
+    z-index: 2;
 }
