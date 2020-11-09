@@ -19,7 +19,7 @@ body{
 
     --orange : rgb(255, 94, 0);
     --naviblue: rgb(10, 10, 26);
-    
+
 }
 
 .First__section{
@@ -72,7 +72,7 @@ body{
 .Home__text p{
     z-index: 1;
     color: white;
-} 
+}
 
 .Home__text button{
     position: relative;
@@ -258,7 +258,7 @@ body{
     font-size: 32px;
     padding-top: 10px;
     position: relative;
-    left: 44%;
+    left: 40%;
     width: 160px;
 }
 
@@ -311,7 +311,7 @@ body{
     margin: 0 auto;
     height: 100%;
     background: linear-gradient(to right bottom, #2B40F5 2% ,rgb(5, 113, 253));
-} 
+}
 
 .About__text h5{
     padding: 20px;
@@ -328,7 +328,7 @@ body{
 .About__text p a{
     cursor: pointer;
     font-size: 20px;
-    color: var(--naviblue);
+    color: var(--orange);
 }
 
 .About__text p a:hover{
@@ -360,7 +360,7 @@ body{
     background: rgb(95, 10, 252);
     color: #EEE;
     border: 2px solid rgb(162, 0, 255);
-    
+
 }
 
 .CV__button:hover{
@@ -372,7 +372,7 @@ body{
     background: #EEE;
     color: rgb(95, 10, 252);
     border: 2px solid rgb(162, 0, 255);
-    
+
 }
 
 
@@ -387,7 +387,7 @@ body{
         height: 200px;
         top: 0;
         left: 0;
-        margin: 10px;        
+        margin: 10px;
         z-index: 1;
         border-radius:0 ;
     }
@@ -398,7 +398,7 @@ body{
         height: 100%;
     }
     .About__text h5 {
-        
+
         padding-top: 220px;
     }
 }
@@ -415,7 +415,7 @@ body{
         height: 200px;
         top: 0;
         left: 25%;
-        margin: 10px;        
+        margin: 10px;
         z-index: 1;
         border-radius:0 10px 10px 0;
     }
@@ -430,12 +430,12 @@ body{
         background: rgb(95, 10, 252);
         color: #EEE;
         border: 2px solid rgb(162, 0, 255);
-        
+
     }
 
 }
 
-    /* Skills section */    
+    /* Skills section */
 
 .skills__section{
     position: relative;
@@ -450,7 +450,7 @@ body{
     padding-top: 10px;
     position: relative;
     top: 20px;
-    left: 44%;
+    left: 40%;
     width: 160px;
 }
 .skills__section .skills h1::before{
@@ -505,7 +505,7 @@ body{
 .skills__content .skills__percentages h6{
     font-size: 24px;
 }
-
+        /* Code for percentage indication in skills */
 .percentageDiv{
     position: relative;
     top: 30px;
@@ -697,5 +697,126 @@ body{
     }
     .skills__percentages{
         padding-top: 40px;
+    }
+}
+
+        /* Hobbies section */
+
+.hobbies__section{
+    position: relative;
+    top: 100px;
+    width: 100%;
+    height: 100%;
+    display: block;
+    padding-bottom: 50px;
+    background: linear-gradient(to left top , rgb(75, 75, 75) , white);
+}
+
+.hobbies__section .hobbies h1{
+    font-size: 32px;
+    padding-top: 10px;
+    position: relative;
+    top: 30px;
+    left: 40%;
+    width: 200px;
+}
+.hobbies__section .hobbies h1::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80%;
+    height: 5px;
+    background: var(--orange);
+    transform: scale(0.2);
+    transform-origin: left;
+    transition: all 500ms ease-in-out;
+    z-index: -1;
+}
+
+.hobbies__section .hobbies h1:hover::before{
+    transform: scale(1);
+    transform-origin: right;
+}
+
+.hobbies__content{
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    position: relative;
+    top: 80px;
+    padding-bottom: 100px;
+}
+
+.hobbies__design,
+.hobbies__developer,
+.hobbies__logoDesign
+{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.design__logo {
+    width: 100%;
+    margin: auto;
+}
+
+.design__logo img,
+.develop__logo img{
+    width: 80px;
+    height: 80px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.design__heading h1,
+.develop__heading h1{
+    text-align: center;
+}
+
+.design__content ,
+.develop__content{
+    position: relative;
+    top: 40px;
+    margin: 0 auto;
+}
+
+.design__content h4,
+.develop__content h4
+{
+    text-align: left;
+    letter-spacing: 0.5px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+@media (max-width :992px){
+    .hobbies__content{
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        position: relative;
+        top: 90px;
+    }
+
+    .hobbies__logoDesign{
+        margin-top: 60px;
+    }
+}
+
+@media (max-width :768px){
+
+
+    .hobbies__content{
+        height: 100%;
+        display: grid;
+        grid-template-columns:  1fr;
+        position: relative;
+        top: 90px;
+    }
+
+    .hobbies__developer{
+        margin-top: 60px;
     }
 }
