@@ -221,3 +221,481 @@ body{
         height: 200px;
     }
 }
+
+
+@media (max-width : 442px){
+
+    .Home__image{
+        margin: 10px;
+        position: absolute;
+        top: 0px;
+        left: 30%;
+        width: 40%;
+        height: 200px;
+    }
+
+    .Home__text h4 {
+        position: relative;
+        margin-top: 166px;
+        padding : 10px 40px;
+        font-size: 20px;
+    }
+}
+
+        /* Second Section */
+
+ .Second__section{
+    position: relative;
+    top: 80px;
+    width: 100%;
+    height: 100%;
+    display: block;
+    overflow: hidden;
+    padding-bottom: 80px;
+}
+
+.Second__section .About h1{
+    font-size: 32px;
+    padding-top: 10px;
+    position: relative;
+    left: 44%;
+    width: 160px;
+}
+
+
+.Second__section .About h1::before{
+    content: '';
+    position: absolute;
+    bottom: 0px  ;
+    width: 20px;
+    height: 3px;
+    background: var(--orange);
+    transition: all 500ms ease-in-out ;
+    transform-origin: left;
+}
+
+.Second__section .About h1:hover::before{
+    content: '';
+    position: absolute;
+    bottom: 0px  ;
+    width: 140px;
+    height: 3px;
+    background: var(--orange);
+    transform-origin: right;
+}
+
+.About__content{
+    height: 100%;
+    position: relative;
+    top: 40px;
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+.About__image{
+    width: 90%;
+    margin: auto;
+    height: 100%;
+    background: url(../img/profile/profile2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.About__text{
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    height: 100%;
+    background: linear-gradient(to right bottom, #2B40F5 2% ,rgb(5, 113, 253));
+} 
+
+.About__text h5{
+    padding: 20px;
+    font-size: 24px;
+    color : #ffff;
+}
+
+.About__text p{
+    padding: 10px 20px;
+    font-size: 20px;
+    color: #fff;
+}
+
+.About__text p a{
+    cursor: pointer;
+    font-size: 20px;
+    color: var(--naviblue);
+}
+
+.About__text p a:hover{
+    cursor: pointer;
+    font-size: 20px;
+    color: rgb(255, 230, 0);
+}
+
+.CV__button{
+
+    padding: 10px;
+    border-radius: 40px;
+    position: relative;
+    top:20px;
+    left: 45%;
+    background: rgb(95, 10, 252);
+    color: #EEE;
+    border: 2px solid rgb(162, 0, 255);
+    transform: scale(1);
+}
+
+.CV__button:focus{
+    transform: scale(0.8);
+    padding: 10px;
+    border-radius: 40px;
+    position: relative;
+    top:16px;
+    left: 45%;
+    background: rgb(95, 10, 252);
+    color: #EEE;
+    border: 2px solid rgb(162, 0, 255);
+    
+}
+
+.CV__button:hover{
+    padding: 10px;
+    border-radius: 40px;
+    position: relative;
+    top: 20px;
+    left: 45%;
+    background: #EEE;
+    color: rgb(95, 10, 252);
+    border: 2px solid rgb(162, 0, 255);
+    
+}
+
+
+@media (max-width:992px){
+    .About__content{
+        grid-template-columns:  100%;
+    }
+
+    .About__image{
+        position: absolute;
+        width: 40%;
+        height: 200px;
+        top: 0;
+        left: 0;
+        margin: 10px;        
+        z-index: 1;
+        border-radius:0 ;
+    }
+
+    .About__text{
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+    .About__text h5 {
+        
+        padding-top: 220px;
+    }
+}
+
+@media (max-width:446px){
+    .Second__section{
+        overflow: hidden;
+        padding-bottom: 80px;
+    }
+
+    .About__image{
+        position: absolute;
+        width: 50%;
+        height: 200px;
+        top: 0;
+        left: 25%;
+        margin: 10px;        
+        z-index: 1;
+        border-radius:0 10px 10px 0;
+    }
+
+    .CV__button{
+
+        padding: 6px;
+        border-radius: 40px;
+        position: relative;
+        top:20px;
+        left: 30%;
+        background: rgb(95, 10, 252);
+        color: #EEE;
+        border: 2px solid rgb(162, 0, 255);
+        
+    }
+
+}
+
+    /* Skills section */    
+
+.skills__section{
+    position: relative;
+    top: 80px;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.skills__section .skills h1{
+    font-size: 32px;
+    padding-top: 10px;
+    position: relative;
+    top: 20px;
+    left: 44%;
+    width: 160px;
+}
+.skills__section .skills h1::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80%;
+    height: 5px;
+    background: var(--orange);
+    transform: scale(0.2);
+    transform-origin: left;
+    transition: all 500ms ease-in-out;
+    z-index: -1;
+}
+
+.skills__section .skills h1:hover::before{
+    transform: scale(1);
+    transform-origin: right;
+}
+
+.skills__content{
+    position: relative;
+    top: 60px;
+    display: grid;
+    width: 100%;
+    grid-template-columns: 50% 50%;
+
+    padding-bottom: 100px;
+}
+
+.skills__text{
+    width: 90%;
+    margin: 0 auto;
+}
+.skills__content .skills__text h1{
+    font-size: 28px;
+}
+
+.skills__content .skills__text p{
+    padding-top: 32px;
+    letter-spacing: 1px;
+    word-wrap: wrap;
+    font-size: 20px;
+}
+
+.skills__content .skills__percentages {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.skills__content .skills__percentages h6{
+    font-size: 24px;
+}
+
+.percentageDiv{
+    position: relative;
+    top: 30px;
+}
+
+.percentageDiv label{
+    font-size: 20px;
+}
+
+.percentageDiv .htmlDiv{
+    position: relative;
+    width: 90%;
+    height: 20px;
+    background: rgb(151, 151, 151);
+}
+
+.percentageDiv .htmlDiv::after{
+    content: '90%';
+    position: absolute;
+    bottom: 0;
+    left: 45%;
+    width: 30px;
+    height: 20px;
+    color:white;
+}
+.percentageDiv .htmlDiv::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 80%;
+    height: 20px;
+    background: green;
+}
+.percentageDiv .cssDiv{
+    position: relative;
+    width: 90%;
+    height: 20px;
+    background: rgb(151, 151, 151);
+}
+
+.percentageDiv .cssDiv::after{
+    content: '90%';
+    position: absolute;
+    bottom: 0;
+    left: 45%;
+    width: 30px;
+    height: 20px;
+    color:white;
+}
+
+.percentageDiv .cssDiv::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 80%;
+    height: 20px;
+    background: green;
+}
+.percentageDiv .bootstrapDiv{
+    position: relative;
+    width: 90%;
+    height: 20px;
+    background: rgb(151, 151, 151);
+}
+
+.percentageDiv .bootstrapDiv::after{
+    content: '80%';
+    position: absolute;
+    bottom: 0;
+    left: 40%;
+    width: 30px;
+    height: 20px;
+    color:white;
+}
+
+.percentageDiv .bootstrapDiv::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 70%;
+    height: 20px;
+    background: rgb(14, 172, 14);
+}
+.percentageDiv .jsDiv{
+    position: relative;
+    width: 90%;
+    height: 20px;
+    background: rgb(151, 151, 151);
+}
+
+.percentageDiv .jsDiv::after{
+    content: '74%';
+    position: absolute;
+    bottom: 0;
+    left: 36%;
+    width: 30px;
+    height: 20px;
+    color:white;
+}
+
+.percentageDiv .jsDiv::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 64%;
+    height: 20px;
+    background: rgb(230, 141, 9);
+}
+.percentageDiv .jqueryDiv{
+    position: relative;
+    width: 90%;
+    height: 20px;
+    background: rgb(151, 151, 151);
+}
+
+.percentageDiv .jqueryDiv::after{
+    content: '50%';
+    position: absolute;
+    bottom: 0;
+    left: 30%;
+    width: 30px;
+    height: 20px;
+    color:rgb(27, 27, 27);
+}
+
+.percentageDiv .jqueryDiv::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 40%;
+    height: 20px;
+    background: rgb(255, 180, 41);
+}
+.percentageDiv .phpDiv{
+    position: relative;
+    width: 90%;
+    height: 20px;
+    background: rgb(151, 151, 151);
+}
+
+.percentageDiv .phpDiv::after{
+    content: '60%';
+    position: absolute;
+    bottom: 0;
+    left: 34%;
+    width: 30px;
+    height: 20px;
+    color:rgb(31, 31, 31);
+}
+
+.percentageDiv .phpDiv::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 50%;
+    height: 20px;
+    background: rgb(255, 201, 24);
+}
+.percentageDiv .mysqlDiv{
+    position: relative;
+    width: 90%;
+    height: 20px;
+    background: rgb(151, 151, 151);
+}
+
+.percentageDiv .mysqlDiv::after{
+    content: '60%';
+    position: absolute;
+    bottom: 0;
+    left: 34%;
+    width: 30px;
+    height: 20px;
+    color:rgb(29, 28, 28);
+}
+
+.percentageDiv .mysqlDiv::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 50%;
+    height: 20px;
+    background: rgb(255, 201, 24);
+}
+
+
+@media (max-width :992px){
+    .skills__content{
+        grid-template-columns: 100%;
+    }
+    .skills__percentages{
+        padding-top: 40px;
+    }
+}

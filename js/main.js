@@ -8,6 +8,7 @@ var typed = new Typed(".typing", {
 })
 
 
+
 function navbar(){
     let header = document.querySelector('header')
     let nav = document.querySelector('nav')
