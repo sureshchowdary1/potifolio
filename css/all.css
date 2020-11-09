@@ -250,8 +250,8 @@ body{
     width: 100%;
     height: 100%;
     display: block;
-    overflow: hidden;
     padding-bottom: 80px;
+    overflow: hidden;
 }
 
 .Second__section .About h1{
@@ -438,6 +438,7 @@ body{
     /* Skills section */
 
 .skills__section{
+    overflow: hidden;
     position: relative;
     top: 80px;
     width: 100%;
@@ -700,7 +701,7 @@ body{
     }
 }
 
-        /* Hobbies section */
+        /* hobbies section */
 
 .hobbies__section{
     position: relative;
@@ -710,6 +711,7 @@ body{
     display: block;
     padding-bottom: 50px;
     background: linear-gradient(to left top , rgb(75, 75, 75) , white);
+    overflow: hidden;
 }
 
 .hobbies__section .hobbies h1{
@@ -719,6 +721,7 @@ body{
     top: 30px;
     left: 40%;
     width: 200px;
+    z-index: 1;
 }
 .hobbies__section .hobbies h1::before{
     content: '';
@@ -818,5 +821,359 @@ body{
 
     .hobbies__developer{
         margin-top: 60px;
+    }
+}
+
+        /* Projects section */
+
+.project__section{
+    margin-top: 60px;
+    position: relative;
+    top: 100px;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: linear-gradient(to left top , rgb(255, 231, 20) , rgb(67, 170, 255));
+    overflow: hidden;
+}
+
+.project__section .project h1{
+    font-size: 32px;
+    padding-top: 10px;
+    position: relative;
+    top: 30px;
+    left: 40%;
+    width: 200px;
+    z-index: 1;
+}
+.project__section .project h1::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80%;
+    height: 5px;
+    background: var(--orange);
+    transform: scale(0.2);
+    transform-origin: left;
+    transition: all 500ms ease-in-out;
+    z-index: -1;
+}
+
+.project__section .project h1:hover::before{
+    transform: scale(1);
+    transform-origin: right;
+}
+
+.project__content
+{
+    position: relative;
+    top: 50px;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.project__content .project__heading h1{
+    padding-top: 30px;
+}
+
+.project__content .project__div ul {
+    position: relative;
+    top: 30px;
+    left: 20px;
+    padding-bottom: 60px;
+}
+
+.project__content .project__div ul li{
+    margin: 10px 0;
+    position: relative;
+}
+
+.project__content .project__div ul li::before{
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: -20px;
+    width: 0;height: 0;
+    border-left: 16px solid var(--orange);
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+
+}
+
+.project__content .project__div ul li a{
+    font-size: 20px;
+    color: rgb(255, 0, 0);
+}
+
+.project__content .project__div p{
+    font-size: 14px;
+    text-align: center;
+    opacity: 0.8;
+    padding-bottom: 10px;
+}
+
+        /* Contact section */
+
+
+.contact__section{
+    color: #fff;
+   position: relative;
+   top: 120px;
+   width: 100%;
+   height: 100%;
+   display: block;
+   overflow: hidden;
+   padding-bottom: 130px;
+   background: linear-gradient(to left bottom , rgb(36, 34, 34) ,rgb(19, 18, 18));
+}
+
+.contact__section .contact h1{
+   font-size: 32px;
+   padding-top: 10px;
+   position: relative;
+   left: 40%;
+   width: 160px;
+}
+
+
+.contact__section .contact h1::before{
+   content: '';
+   position: absolute;
+   bottom: 0px  ;
+   width: 20px;
+   height: 3px;
+   background: var(--orange);
+   transition: all 500ms ease-in-out ;
+   transform-origin: left;
+}
+
+.contact__section .contact h1:hover::before{
+   content: '';
+   position: absolute;
+   bottom: 0px  ;
+   width: 156px;
+   height: 3px;
+   background: var(--orange);
+   transform-origin: right;
+}
+
+.contact__content{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.contact__content .contact__text{
+    position: relative;
+    top: 40px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.contact__content .contact__text h1{
+    position: relative;
+    top: 20px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.contact__content .contact__text p{
+    position: relative;
+    top: 30px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.socialMedial{
+    position: absolute;
+    top: 80px;
+    left: 10%;
+    display: flex;
+    width: 100%;
+}
+
+
+.socialMedial ul a li {
+    margin: 10px;
+}
+
+.socialMedial ul a .fa-facebook-square{
+    color: rgb(79, 79, 230);
+    
+    font-size: 24px;
+}
+.socialMedial ul a .fa-linkedin{
+    background: rgb(98, 98, 168);
+    color: #fff;
+    font-size: 24px;
+}
+.socialMedial ul a .fa-instagram{
+    color: rgb(212, 79, 230);
+    font-size: 24px;
+}
+
+.contact__links{
+    margin-bottom: 60px;
+    position: relative;
+    top: 100px;
+}
+
+.contact__links .name{
+    position: relative;
+    top: 0px;
+    left: 10%;
+}
+
+.contact__links .name p{
+    position: relative;
+    top: 5px;
+    left: 5%;
+}
+
+.contact__links .email{
+    position: relative;
+    top: 30px;
+    left: 10%;
+}
+
+.contact__links .email p{
+    position: relative;
+    top: 5px;
+    left: 5%;
+}
+
+.contact__mail{
+    position: relative;
+    top: 60px;
+}
+
+.contact__mail h1{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+form{
+    
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+form input{
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    padding: 6px;
+    margin-left: 10%;
+}
+
+form .msg__name {
+    display: flex;
+
+}
+
+form .msg__name .fName{
+    margin-right: 20px;
+}
+
+form .msg__name .fName input ,
+form .msg__name .lName input{
+    border: none;
+    border-radius: 5px;
+    padding: 6px;
+}
+
+form .msg__send{
+    width: 30%;
+    font-size: 16px;
+    border-radius: 50px;
+    padding: 6px;
+    border: 2px solid var(--orange);
+    position: relative;
+    left: 44%;
+    background: var(--orange);
+    color: #fff;
+    transform: scale(1);
+}
+
+form .msg__send:focus{
+    transform: scale(0.8);
+}
+
+
+
+form .msg__send:hover{
+    border: 2px solid #fff;
+    background: transparent;
+    color: var(--orange);
+    font-size: 16px;
+}
+
+        /* footer */
+
+footer{
+    
+    position: relative;
+    top: 100px;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    background: black;
+    color: #9b9b9b;
+}
+
+footer h1{
+    text-align: center;
+    font-size: 16px;
+}
+
+.fa-heart{
+    color: rgb(238, 48, 48);
+}
+
+@media (max-width : 992px){
+    .contact__content{
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr ;
+    }
+    
+    .contact__mail{
+        position: relative;
+        left: 10%;
+        top: 150px;
+    }
+    
+    form{
+        padding-bottom: 60px;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+    }
+    form input{
+        margin-left: 0%;
+    }
+    
+    form .msg__send{
+        left: 30%;
+    }
+
+    form .msg__name .fName input ,
+    form .msg__name .lName input{
+        width: 96%;
+        border: none;
+        border-radius: 5px;
+        padding: 6px;
+    }
+
+    form .msg__name .fName{
+        margin-right: 0px;
+    }
+    form .msg__name {
+        display: flex;
+        flex-direction: column;
     }
 }
