@@ -420,7 +420,7 @@ body{
     }
 
     .Second__section .About h1{
-        left: 25%;
+        left: 30%;
     }
 
     .About__image{
@@ -720,7 +720,7 @@ body{
 
 @media (max-width : 446px){
     .skills__section .skills h1{
-        left: 25%;
+        left: 30%;
     }
 }
         /* hobbies section */
@@ -851,7 +851,7 @@ body{
 
 @media (max-width:446px){
     .hobbies__section .hobbies h1{
-        left: 25%;
+        left: 30%;
     }
 }
 
@@ -950,7 +950,7 @@ body{
 
 @media (max-width:446px){
     .project__section .project h1{
-        left: 25%;
+        left: 30%;
     }
 }
         /* Contact section */
@@ -1152,6 +1152,12 @@ form .msg__send:hover{
     font-size: 16px;
 }
 
+
+@media (max-width : 446px){
+    .contact__section .contact h1{
+        left: 30%;
+}
+
         /* footer */
 
 footer{
@@ -1230,10 +1236,6 @@ footer h1{
     
 }
 
-@media (max-width : 446px){
-    .contact__section .contact h1{
-        left: 25%;
-}
 
 @media (min-width : 992px){
     .msg__send::after{
