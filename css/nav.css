@@ -54,6 +54,8 @@ nav{
 }
 
 .menu ul li a{
+    font-weight: 500;
+    font-family: sans-serif;
     font-size: 22px;
     color : #000;
 }

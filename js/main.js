@@ -50,3 +50,18 @@ function bloodDrop(){
 }
 
 bloodDrop()
+
+function sendAnim(){
+    let sendAfter = document.querySelector('.msg__send::after')
+    let send = document.querySelector('.msg__send')
+
+    send.addEventListener('mouseenter' , () => {
+        send.classList.add('go')
+    })
+    
+    send.addEventListener('mouseleave' , () => {
+        send.classList.remove('go')
+    })
+}
+
+sendAnim()

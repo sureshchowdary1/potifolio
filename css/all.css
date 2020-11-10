@@ -5,6 +5,8 @@
     text-decoration: none;
     list-style-type: none;
     outline: none;
+    font-family: var(--default);
+    font-weight: 400;
 }
 
 body{
@@ -260,6 +262,9 @@ body{
     position: relative;
     left: 40%;
     width: 160px;
+    font-family: var(--heading);
+    font-weight: 700;
+    color: var(--naviblue);
 }
 
 
@@ -317,12 +322,17 @@ body{
     padding: 20px;
     font-size: 24px;
     color : #ffff;
+    font-family: var(--sansita);
+    font-weight: 400;
 }
 
 .About__text p{
     padding: 10px 20px;
     font-size: 20px;
     color: #fff;
+    
+    font-family: var(--writing);
+    font-weight: 500;
 }
 
 .About__text p a{
@@ -409,6 +419,10 @@ body{
         padding-bottom: 80px;
     }
 
+    .Second__section .About h1{
+        left: 25%;
+    }
+
     .About__image{
         position: absolute;
         width: 50%;
@@ -453,6 +467,9 @@ body{
     top: 20px;
     left: 40%;
     width: 160px;
+    font-family: var(--heading);
+    font-weight: 700;
+    color: var(--naviblue);
 }
 .skills__section .skills h1::before{
     content: '';
@@ -701,6 +718,11 @@ body{
     }
 }
 
+@media (max-width : 446px){
+    .skills__section .skills h1{
+        left: 25%;
+    }
+}
         /* hobbies section */
 
 .hobbies__section{
@@ -722,6 +744,9 @@ body{
     left: 40%;
     width: 200px;
     z-index: 1;
+    font-family: var(--heading);
+    font-weight: 700;
+    color: var(--naviblue);
 }
 .hobbies__section .hobbies h1::before{
     content: '';
@@ -824,6 +849,12 @@ body{
     }
 }
 
+@media (max-width:446px){
+    .hobbies__section .hobbies h1{
+        left: 25%;
+    }
+}
+
         /* Projects section */
 
 .project__section{
@@ -845,6 +876,9 @@ body{
     left: 40%;
     width: 200px;
     z-index: 1;
+    font-family: var(--heading);
+    font-weight: 700;
+    color: var(--naviblue);
 }
 .project__section .project h1::before{
     content: '';
@@ -914,6 +948,11 @@ body{
     padding-bottom: 10px;
 }
 
+@media (max-width:446px){
+    .project__section .project h1{
+        left: 25%;
+    }
+}
         /* Contact section */
 
 
@@ -935,6 +974,8 @@ body{
    position: relative;
    left: 40%;
    width: 160px;
+   font-family: var(--heading);
+   font-weight: 700;
 }
 
 
@@ -1176,4 +1217,51 @@ footer h1{
         display: flex;
         flex-direction: column;
     }
+}
+
+@media (max-width : 772px){
+    .socialMedial{
+        position: absolute;
+        top: 100px;
+        left: 10%;
+        display: flex;
+        width: 100%;
+    }
+    
+}
+
+@media (max-width : 446px){
+    .contact__section .contact h1{
+        left: 25%;
+}
+
+@media (min-width : 992px){
+    .msg__send::after{
+        content: '';
+        position: absolute;
+        top: -10px;
+        right: -40px;
+        background: url(../img/paperRocket/plainRocket.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 50px;height: 50px;
+        z-index: 1;
+        transform: rotate(45deg);
+    }
+    
+    .msg__send.go.msg__send::after{
+        content: '';
+        position: absolute;
+        top: -10px;
+        left:100%;
+        background: url(../img/paperRocket/plainRocket.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 50px;height: 50px;
+        z-index: 1;
+        transform: rotate(45deg);
+    }
+
 }
